@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-08T20:43:51.185Z",
+  "basePricing": {
+    "hardwood": {
+      "entry": [
+        6,
+        10
+      ],
+      "mid": [
+        10,
+        16
+      ],
+      "premium": [
+        16,
+        25
+      ]
+    },
+    "engineered": {
+      "entry": [
+        5,
+        9
+      ],
+      "mid": [
+        9,
+        14
+      ],
+      "premium": [
+        14,
+        22
+      ]
+    },
+    "lvp": {
+      "entry": [
+        4,
+        6
+      ],
+      "mid": [
+        6,
+        9
+      ],
+      "premium": [
+        9,
+        13
+      ]
+    },
+    "laminate": {
+      "entry": [
+        3,
+        6
+      ],
+      "mid": [
+        5,
+        8
+      ],
+      "premium": [
+        8,
+        11
+      ]
+    },
+    "ceramic": {
+      "entry": [
+        7,
+        11
+      ],
+      "mid": [
+        11,
+        18
+      ],
+      "premium": [
+        18,
+        35
+      ]
+    },
+    "stone": {
+      "entry": [
+        14,
+        20
+      ],
+      "mid": [
+        20,
+        32
+      ],
+      "premium": [
+        32,
+        60
+      ]
+    },
+    "carpet": {
+      "entry": [
+        2,
+        4
+      ],
+      "mid": [
+        4,
+        6
+      ],
+      "premium": [
+        6,
+        10
+      ]
+    },
+    "epoxy": {
+      "entry": [
+        4,
+        7
+      ],
+      "mid": [
+        5,
+        9
+      ],
+      "premium": [
+        8,
+        15
+      ]
+    },
+    "polished": {
+      "entry": [
+        3,
+        5
+      ],
+      "mid": [
+        5,
+        8
+      ],
+      "premium": [
+        8,
+        12
+      ]
+    }
+  },
+  "surcharges": {
+    "commercial": {
+      "label": "Commercial installation",
+      "min": 2,
+      "max": 4
+    },
+    "outdoor_nonepoxy": {
+      "label": "Outdoor installation",
+      "min": 3,
+      "max": 6
+    },
+    "outdoor_epoxy_uv": {
+      "label": "Outdoor UV coating",
+      "min": 1.5,
+      "max": 3
+    },
+    "concrete_minor": {
+      "label": "Concrete — minor cracks",
+      "min": 1,
+      "max": 2.5
+    },
+    "concrete_major": {
+      "label": "Concrete — major repair",
+      "min": 3,
+      "max": 6
+    }
+  }
+}

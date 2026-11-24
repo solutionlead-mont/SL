@@ -1,0 +1,9 @@
+{
+  "name": "estimateur-sol",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Estimateur de prix de revêtement de sol avec page admin pour gérer les tarifs (prices.json).",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
