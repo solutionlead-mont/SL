@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/site.css?v=12">
+<link rel="stylesheet" href="/site.css?v=13">
 </head>
 <body>
 
@@ -173,6 +173,38 @@
     </div>
   </div>
 </section>
+
+<!-- ================= SCAN ================= -->
+<section class="section section--panel scan-section" id="scan">
+  <div class="container scan-layout">
+    <div class="section-head scan-copy">
+      <span class="eyebrow">Processus de scan</span>
+      <h2>Trois lectures.<br>Une seule analyse.</h2>
+      <p>Chaque image est scannée, validée, puis remplacée par la suivante dans un flux continu. Une lecture rapide, précise et sans interruption.</p>
+      <div class="scan-steps" aria-label="Étapes du scan">
+        <span><b>01</b> Détection</span>
+        <span><b>02</b> Analyse</span>
+        <span><b>03</b> Validation</span>
+      </div>
+    </div>
+
+    <div class="scan-viewport" aria-label="Animation de scan en trois images">
+      <div class="scan-frame">
+        <img class="scan-slide scan-slide--1" src="/scan-1.jpg?v=1" alt="Première étape du processus de scan" width="1400" height="1400">
+        <img class="scan-slide scan-slide--2" src="/scan-2.jpg?v=1" alt="Deuxième étape du processus de scan" width="1400" height="1400">
+        <img class="scan-slide scan-slide--3" src="/scan-3.jpg?v=1" alt="Troisième étape du processus de scan" width="1400" height="1400">
+        <div class="scan-grid" aria-hidden="true"></div>
+        <div class="scan-line" aria-hidden="true"></div>
+        <div class="scan-flash" aria-hidden="true"></div>
+        <span class="scan-status" aria-hidden="true">SCAN EN COURS</span>
+      </div>
+      <div class="scan-caption">
+        <span class="scan-dots" aria-hidden="true"><i class="scan-dot"></i><i class="scan-dot"></i><i class="scan-dot"></i></span>
+        <span>Analyse automatique</span>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- ================= FOOTER ================= -->
@@ -191,6 +223,6 @@
   </div>
 </footer>
 
-<script src="/site.js?v=12"></script>
+<script src="/site.js?v=13"></script>
 </body>
 </html>
