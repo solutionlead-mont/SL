@@ -525,3 +525,51 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
 .page-head h1{max-width:900px;font-size:clamp(2.6rem,5.6vw,4.4rem);line-height:1.02}
 .page-head p{max-width:720px;margin-top:1.2rem;color:var(--muted);font-size:clamp(1rem,1.5vw,1.15rem)}
 .page-head .eyebrow{margin-bottom:1.2rem}
+
+/* ---------- À propos : équipe & témoignages ---------- */
+.team-section{border-bottom:1px solid var(--line)}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.team-card{
+  position:relative;padding:28px 24px;border:1px solid var(--line);border-radius:18px;
+  background:linear-gradient(160deg,var(--card-2),var(--card) 60%,#0b0d10);
+  transition:border-color .3s,transform .3s var(--ease);
+}
+.team-card:hover{border-color:rgba(241,211,132,.45);transform:translateY(-4px)}
+.team-avatar{
+  width:58px;height:58px;border-radius:16px;display:grid;place-items:center;margin-bottom:1.4rem;
+  font-family:"Space Grotesk",sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.04em;
+  color:var(--accent);background:rgba(241,211,132,.08);border:1px solid var(--line-strong);
+}
+.team-card h3{font-size:1.15rem;margin-bottom:.35rem}
+.team-role{display:block;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:1rem}
+.team-card p{color:var(--muted);font-size:.9rem;line-height:1.6}
+
+.testimonials{position:relative}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testimonial-card{
+  position:relative;overflow:hidden;padding:30px 26px;border:1px solid var(--line);border-radius:18px;
+  background:linear-gradient(150deg,var(--card-2),var(--card) 60%,#0b0d10);
+  transition:border-color .3s,transform .3s var(--ease);
+}
+.testimonial-card::after{
+  content:"";position:absolute;width:280px;height:280px;right:-150px;top:-170px;border-radius:50%;
+  background:radial-gradient(circle,rgba(241,211,132,.09),transparent 65%);pointer-events:none;
+}
+.testimonial-card:hover{border-color:rgba(241,211,132,.45);transform:translateY(-4px)}
+.testimonial-card .quote-mark{font-size:4.2rem;margin-bottom:.8rem;opacity:.75;position:relative}
+.testimonial-card blockquote{font-size:1.05rem;font-weight:500;line-height:1.55;letter-spacing:-.01em;position:relative}
+.testimonial-author{display:flex;align-items:center;gap:.85rem;margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid var(--line);position:relative}
+.testimonial-avatar{
+  width:40px;height:40px;flex:none;border-radius:50%;display:grid;place-items:center;
+  font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--accent);
+  background:rgba(241,211,132,.08);border:1px solid var(--line-strong);
+}
+.testimonial-author strong{display:block;font-size:.9rem}
+.testimonial-author span:not(.testimonial-avatar){display:block;font-size:.8rem;color:var(--muted);margin-top:.2rem}
+@media(max-width:1050px){
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonial-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .team-grid{grid-template-columns:1fr}
+}
