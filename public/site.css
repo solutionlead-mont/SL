@@ -545,6 +545,20 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
 .team-card p{color:var(--muted);font-size:.9rem;line-height:1.6}
 
 .testimonials{position:relative}
+.testimonial-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:706px;margin:0 auto 34px}
+.testimonial-photo{
+  position:relative;margin:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  background:var(--card);aspect-ratio:1 / 1;
+}
+.testimonial-photo img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(.9) contrast(1.03);transition:transform .6s var(--ease),filter .35s var(--ease);
+}
+.testimonial-photo:hover img{transform:scale(1.04);filter:saturate(1) contrast(1.02)}
+.testimonial-photo::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,transparent 60%,rgba(11,10,8,.35));
+}
 .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .testimonial-card{
   position:relative;overflow:hidden;padding:30px 26px;border:1px solid var(--line);border-radius:18px;
@@ -572,4 +586,5 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
 }
 @media(max-width:700px){
   .team-grid{grid-template-columns:1fr}
+  .testimonial-gallery{grid-template-columns:1fr}
 }
