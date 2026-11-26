@@ -760,19 +760,20 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
 .scan-section{overflow:hidden}
 .scan-copy{max-width:760px;margin-bottom:44px}
 .scan-strip{
-  display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);
-  gap:clamp(10px,2vw,22px);align-items:center;
+  display:flex;justify-content:center;align-items:center;flex-wrap:nowrap;
+  gap:clamp(10px,2vw,22px);
 }
 .scan-card{
-  min-width:0;padding:10px;border:1px solid var(--line);border-radius:18px;
+  flex:1 1 0;max-width:380px;min-width:0;padding:10px;border:1px solid var(--line);border-radius:18px;
   background:linear-gradient(160deg,var(--card-2),var(--card) 65%,#0b0d10);
-  animation:scanCard 15s linear infinite;
+  transition:border-color .3s,box-shadow .3s;
 }
-.scan-card--2{animation-delay:5s}
-.scan-card--3{animation-delay:10s}
-@keyframes scanCard{
-  0%,30%{border-color:rgba(255,70,70,.6);box-shadow:0 0 30px -12px rgba(255,70,70,.5)}
-  33.333%,100%{border-color:var(--line);box-shadow:none}
+.scan-card.is-scanning{border-color:rgba(255,70,70,.6);box-shadow:0 0 30px -12px rgba(255,70,70,.5)}
+.scan-hidden{display:none!important}
+.scan-reveal{animation:scanReveal .65s cubic-bezier(.22,.61,.36,1) both}
+@keyframes scanReveal{
+  from{opacity:0;transform:translateX(-26px)}
+  to{opacity:1;transform:translateX(0)}
 }
 .scan-card-media{
   position:relative;aspect-ratio:1 / 1;overflow:hidden;border-radius:12px;
@@ -788,30 +789,25 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
   position:absolute;left:0;right:0;top:-4%;height:3px;z-index:4;pointer-events:none;opacity:0;
   background:linear-gradient(90deg,transparent,#ff2d2d 16%,#ff7676 50%,#ff2d2d 84%,transparent);
   box-shadow:0 0 16px 2px rgba(255,45,45,.85),0 0 44px 6px rgba(255,45,45,.32);
-  animation:scanLine 15s linear infinite;
 }
-.scan-card--2 .scan-line{animation-delay:5s}
-.scan-card--3 .scan-line{animation-delay:10s}
+.scan-card.is-scanning .scan-line{animation:scanLine 5s linear infinite}
 .scan-line::after{
   content:"";position:absolute;left:0;right:0;bottom:0;height:70px;
   background:linear-gradient(0deg,transparent,rgba(255,45,45,.16));
 }
 @keyframes scanLine{
   0%{top:-4%;opacity:0}
-  3%{opacity:1}
-  30%{top:104%;opacity:1}
-  33.333%{top:104%;opacity:0}
+  6%{opacity:1}
+  94%{opacity:1}
   100%{top:104%;opacity:0}
 }
 .scan-flash{
   position:absolute;inset:0;z-index:5;pointer-events:none;background:rgba(255,255,255,.82);opacity:0;
-  animation:scanFlash 15s linear infinite;
 }
-.scan-card--2 .scan-flash{animation-delay:5s}
-.scan-card--3 .scan-flash{animation-delay:10s}
+.scan-card.is-scanning .scan-flash{animation:scanFlash 5s linear infinite}
 @keyframes scanFlash{
-  0%,30%,35%,63%,68%,96%,100%{opacity:0}
-  31.5%,64.8%,98%{opacity:.65}
+  0%,88%,100%{opacity:0}
+  94%{opacity:.65}
 }
 .scan-status{
   position:absolute;left:12px;bottom:12px;z-index:6;
@@ -839,11 +835,12 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
 .scan-strip:hover .scan-connector svg{animation-play-state:paused}
 
 @media(max-width:900px){
-  .scan-strip{grid-template-columns:1fr;gap:14px}
+  .scan-strip{flex-direction:column;gap:14px}
+  .scan-card{width:100%;max-width:520px}
   .scan-connector{height:26px}
   .scan-connector svg{transform:rotate(90deg);animation:none}
 }
 @media(prefers-reduced-motion:reduce){
-  .scan-card,.scan-line,.scan-flash,.scan-connector svg{animation:none}
+  .scan-line,.scan-flash,.scan-reveal,.scan-connector svg{animation:none}
   .scan-line{display:none}
 }

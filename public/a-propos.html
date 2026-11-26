@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/site.css?v=18">
+<link rel="stylesheet" href="/site.css?v=19">
 </head>
 <body>
 
@@ -184,7 +184,7 @@
     </div>
 
     <div class="scan-strip" aria-label="Trois images scannées successivement">
-      <article class="scan-card scan-card--1">
+      <article class="scan-card scan-card--1 is-scanning">
         <div class="scan-card-media">
           <img src="/scan-1.jpg?v=1" alt="Première étape du processus de scan" width="1400" height="1400">
           <div class="scan-grid" aria-hidden="true"></div>
@@ -195,11 +195,11 @@
         <div class="scan-card-caption"><b>01</b> Détection</div>
       </article>
 
-      <div class="scan-connector" aria-hidden="true">
+      <div class="scan-connector scan-connector--1 scan-hidden" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
       </div>
 
-      <article class="scan-card scan-card--2">
+      <article class="scan-card scan-card--2 scan-hidden">
         <div class="scan-card-media">
           <img src="/scan-2.jpg?v=1" alt="Deuxième étape du processus de scan" width="1400" height="1400">
           <div class="scan-grid" aria-hidden="true"></div>
@@ -210,11 +210,11 @@
         <div class="scan-card-caption"><b>02</b> Analyse</div>
       </article>
 
-      <div class="scan-connector" aria-hidden="true">
+      <div class="scan-connector scan-connector--2 scan-hidden" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
       </div>
 
-      <article class="scan-card scan-card--3">
+      <article class="scan-card scan-card--3 scan-hidden">
         <div class="scan-card-media">
           <img src="/scan-3.jpg?v=1" alt="Troisième étape du processus de scan" width="1400" height="1400">
           <div class="scan-grid" aria-hidden="true"></div>
@@ -245,6 +245,6 @@
   </div>
 </footer>
 
-<script src="/site.js?v=18"></script>
+<script src="/site.js?v=19"></script>
 </body>
 </html>

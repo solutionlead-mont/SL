@@ -83,6 +83,27 @@
     }
   });
 
+  /* --- Scan : révélation progressive des images et passage du scan --- */
+  var scanStep1 = document.querySelectorAll('.scan-connector--1, .scan-card--2');
+  var scanStep2 = document.querySelectorAll('.scan-connector--2, .scan-card--3');
+  var scanCard1 = document.querySelector('.scan-card--1');
+  var scanCard2 = document.querySelector('.scan-card--2');
+  var scanCard3 = document.querySelector('.scan-card--3');
+  function revealScan(nodes){
+    Array.prototype.forEach.call(nodes, function(el){
+      el.classList.remove('scan-hidden');
+      el.classList.add('scan-reveal');
+    });
+  }
+  function scanOn(el){ if(el) el.classList.add('is-scanning'); }
+  function scanOff(el){ if(el) el.classList.remove('is-scanning'); }
+  if(scanStep1.length){
+    window.setTimeout(function(){ revealScan(scanStep1); }, 4800);
+    window.setTimeout(function(){ scanOff(scanCard1); scanOn(scanCard2); }, 5000);
+    window.setTimeout(function(){ revealScan(scanStep2); }, 9800);
+    window.setTimeout(function(){ scanOff(scanCard2); scanOn(scanCard3); }, 10000);
+  }
+
   /* --- Reveal au scroll --- */
   var items = document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
