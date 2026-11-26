@@ -775,16 +775,16 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
 .scan-slide{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   opacity:0;transform:translateX(100%);
-  animation:scanSlide 7.5s cubic-bezier(.22,.61,.36,1) infinite;
+  animation:scanSlide 15s cubic-bezier(.22,.61,.36,1) infinite;
 }
 .scan-slide--1{animation-delay:0s}
-.scan-slide--2{animation-delay:2.5s}
-.scan-slide--3{animation-delay:5s}
+.scan-slide--2{animation-delay:5s}
+.scan-slide--3{animation-delay:10s}
 @keyframes scanSlide{
   0%{opacity:0;transform:translateX(100%)}
-  4%{opacity:1;transform:translateX(0)}
-  28%{opacity:1;transform:translateX(0)}
-  33.3%{opacity:0;transform:translateX(-100%)}
+  3%{opacity:1;transform:translateX(0)}
+  30%{opacity:1;transform:translateX(0)}
+  33.333%{opacity:0;transform:translateX(-100%)}
   100%{opacity:0;transform:translateX(-100%)}
 }
 .scan-grid{
@@ -796,7 +796,7 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
   position:absolute;left:0;right:0;top:-4%;height:3px;z-index:4;pointer-events:none;
   background:linear-gradient(90deg,transparent,#ff2d2d 16%,#ff7676 50%,#ff2d2d 84%,transparent);
   box-shadow:0 0 16px 2px rgba(255,45,45,.85),0 0 44px 6px rgba(255,45,45,.32);
-  animation:scanSweep 2.5s linear infinite;
+  animation:scanSweep 5s linear infinite;
 }
 .scan-line::after{
   content:"";position:absolute;left:0;right:0;bottom:0;height:90px;
@@ -810,11 +810,11 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
 }
 .scan-flash{
   position:absolute;inset:0;z-index:5;pointer-events:none;background:rgba(255,255,255,.82);opacity:0;
-  animation:scanFlash 7.5s linear infinite;
+  animation:scanFlash 15s linear infinite;
 }
 @keyframes scanFlash{
-  0%,28%,35%,61.5%,68.5%,95%,100%{opacity:0}
-  31%,64.5%,97.5%{opacity:.85}
+  0%,30%,35%,63%,68%,96%,100%{opacity:0}
+  31.5%,64.8%,98%{opacity:.85}
 }
 .scan-status{
   position:absolute;left:16px;bottom:16px;z-index:6;
@@ -828,13 +828,13 @@ blockquote{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6re
 .scan-dots{display:inline-flex;gap:.35rem}
 .scan-dot{
   width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);
-  animation:scanDot 7.5s linear infinite;
+  animation:scanDot 15s linear infinite;
 }
-.scan-dot:nth-child(2){animation-delay:2.5s}
-.scan-dot:nth-child(3){animation-delay:5s}
+.scan-dot:nth-child(2){animation-delay:5s}
+.scan-dot:nth-child(3){animation-delay:10s}
 @keyframes scanDot{
   0%,30%{background:#ff3b3b;box-shadow:0 0 10px rgba(255,59,59,.9)}
-  33.3%,100%{background:rgba(255,255,255,.2);box-shadow:none}
+  33.333%,100%{background:rgba(255,255,255,.2);box-shadow:none}
 }
 .scan-viewport:hover .scan-slide,
 .scan-viewport:hover .scan-line,
