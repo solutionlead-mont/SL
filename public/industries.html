@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/site.css?v=9">
+<link rel="stylesheet" href="/site.css?v=11">
 </head>
 <body>
 
@@ -20,14 +20,43 @@
         <img class="brand-logo" src="/logo-nouveau.png?v=2" alt="Solution Lead" width="72" height="42">
       </a>
 
-      <div class="nav-links" id="navLinks">
-        <a href="/index.html">Accueil</a>
-        <a href="/a-propos.html">À propos</a>
-        <a href="/systemes.html">Systèmes</a>
-        <a href="/formation.html">Formation</a>
-        <a href="/approche.html">Approche</a>
-        <a href="/industries.html" aria-current="page">Industries</a>
-        <a href="/resultats.html">Résultats</a>
+            <div class="nav-links" id="navLinks">
+        <a class="nav-link" href="/index.html">Accueil</a>
+        <div class="nav-item">
+          <button class="nav-link nav-parent" type="button" aria-expanded="false" aria-controls="menuFormation">Formation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="dropdown dropdown--simple" id="menuFormation">
+            <a href="/formation.html#presentation">Présentation de la formation</a>
+            <a href="/formation.html#programme">Programme et modules</a>
+            <a href="/formation.html#coaching">Coaching et accompagnement</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-link nav-parent" type="button" aria-expanded="false" aria-controls="menuServices">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="dropdown dropdown--mega" id="menuServices">
+            <div class="dropdown-col">
+              <h4>Marketing</h4>
+              <a href="/services.html#meta-ads">Publicité Meta Ads</a>
+              <a href="/services.html#google-ads">Publicité Google Ads</a>
+              <a href="/services.html#seo">Référencement SEO</a>
+              <a href="/services.html#video">Création de contenu vidéo</a>
+            </div>
+            <div class="dropdown-col">
+              <h4>Développement</h4>
+              <a href="/services.html#logiciels-personnalises">Logiciels personnalisés</a>
+              <a href="/services.html#logiciels-operationnels">Logiciels opérationnels</a>
+              <a href="/services.html#sites-web">Création de sites web</a>
+              <a href="/services.html#gohighlevel">CRM GoHighLevel</a>
+            </div>
+            <div class="dropdown-col">
+              <h4>Consulting</h4>
+              <a href="/services.html#consulting-vente">Consulting en vente</a>
+              <a href="/services.html#branding">Marketing et branding</a>
+              <a href="/services.html#operations">Opérations et développement d'entreprise</a>
+            </div>
+          </div>
+        </div>
+        <a class="nav-link" href="/a-propos.html">À propos</a>
+        <a class="nav-link" href="/index.html#contact">Contact</a>
       </div>
 
       <div class="nav-actions">
@@ -88,14 +117,14 @@
         <a class="brand" href="/index.html"><img class="brand-logo" src="/logo-nouveau.png?v=2" alt="Solution Lead" width="120" height="70"></a>
         <p>Systèmes d'acquisition pour entrepreneurs de services et de construction. Croissance prévisible, garantie et mesurable.</p>
       </div>
-      <div class="footer-col"><h4>Liens du site</h4><ul><li><a href="/index.html">Accueil</a></li><li><a href="/a-propos.html">À propos</a></li><li><a href="/systemes.html">Systèmes</a></li><li><a href="/formation.html">Formation</a></li><li><a href="/approche.html">Approche</a></li><li><a href="/industries.html">Industries</a></li><li><a href="/resultats.html">Résultats</a></li></ul></div>
-      <div class="footer-col"><h4>Autres liens</h4><ul><li><a href="https://www.solutionlead.ca/politique-de-confidentialite" target="_blank" rel="noopener">Politique de confidentialité</a></li><li><a href="/index.html#contact">Consultation gratuite</a></li></ul></div>
+      <div class="footer-col"><h4>Liens du site</h4><ul><li><a href="/index.html">Accueil</a></li><li><a href="/formation.html">Formation</a></li><li><a href="/services.html">Services</a></li><li><a href="/a-propos.html">À propos</a></li><li><a href="/index.html#contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Autres liens</h4><ul><li><a href="/systemes.html">Systèmes</a></li><li><a href="/approche.html">Approche</a></li><li><a href="/industries.html">Industries</a></li><li><a href="/resultats.html">Résultats</a></li><li><a href="https://www.solutionlead.ca/politique-de-confidentialite" target="_blank" rel="noopener">Politique de confidentialité</a></li></ul></div>
       <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+15149185206">+1 (514) 918-5206</a></li><li><a href="mailto:info@solutionlead.ca">info@solutionlead.ca</a></li><li><a href="https://www.google.com/maps/place/Solution+Lead/data=!4m2!3m1!1s0x0:0xb35552dfd7ab5809" target="_blank" rel="noopener">202-3181 Mnt Saint-Hubert, Saint-Hubert, QC</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2025 Solution Lead. Tous droits réservés.</span><span>Conçu pour générer des ventes, pas des impressions.</span></div>
   </div>
 </footer>
 
-<script src="/site.js?v=9"></script>
+<script src="/site.js?v=11"></script>
 </body>
 </html>

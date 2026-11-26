@@ -46,6 +46,40 @@
       links.classList.remove('is-open');
       toggle.setAttribute('aria-expanded','false');
       toggle.setAttribute('aria-label','Ouvrir le menu');
+      closeDropdowns();
+    }
+  });
+
+  /* --- Sous-menus (clic / clavier, en plus du survol sur desktop) --- */
+  var dropdownItems = Array.prototype.slice.call(document.querySelectorAll('.nav-item'));
+  function closeDropdowns(except){
+    dropdownItems.forEach(function(item){
+      if(item === except) return;
+      item.classList.remove('is-open');
+      var btn = item.querySelector('.nav-parent');
+      if(btn) btn.setAttribute('aria-expanded','false');
+    });
+  }
+  dropdownItems.forEach(function(item){
+    var btn = item.querySelector('.nav-parent');
+    if(!btn) return;
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var willOpen = !item.classList.contains('is-open');
+      closeDropdowns(willOpen ? item : null);
+      item.classList.toggle('is-open', willOpen);
+      btn.setAttribute('aria-expanded', String(willOpen));
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-item')) closeDropdowns();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      closeDropdowns();
+      links.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-label','Ouvrir le menu');
     }
   });
 

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/site.css?v=9">
+<link rel="stylesheet" href="/site.css?v=11">
 </head>
 <body>
 
@@ -20,14 +20,43 @@
         <img class="brand-logo" src="/logo-nouveau.png?v=2" alt="Solution Lead" width="72" height="42">
       </a>
 
-      <div class="nav-links" id="navLinks">
-        <a href="/index.html">Accueil</a>
-        <a href="/a-propos.html">À propos</a>
-        <a href="/systemes.html">Systèmes</a>
-        <a href="/formation.html" aria-current="page">Formation</a>
-        <a href="/approche.html">Approche</a>
-        <a href="/industries.html">Industries</a>
-        <a href="/resultats.html">Résultats</a>
+            <div class="nav-links" id="navLinks">
+        <a class="nav-link" href="/index.html">Accueil</a>
+        <div class="nav-item">
+          <button class="nav-link nav-parent" type="button" aria-expanded="false" aria-controls="menuFormation" aria-current="page">Formation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="dropdown dropdown--simple" id="menuFormation">
+            <a href="/formation.html#presentation">Présentation de la formation</a>
+            <a href="/formation.html#programme">Programme et modules</a>
+            <a href="/formation.html#coaching">Coaching et accompagnement</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-link nav-parent" type="button" aria-expanded="false" aria-controls="menuServices">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="dropdown dropdown--mega" id="menuServices">
+            <div class="dropdown-col">
+              <h4>Marketing</h4>
+              <a href="/services.html#meta-ads">Publicité Meta Ads</a>
+              <a href="/services.html#google-ads">Publicité Google Ads</a>
+              <a href="/services.html#seo">Référencement SEO</a>
+              <a href="/services.html#video">Création de contenu vidéo</a>
+            </div>
+            <div class="dropdown-col">
+              <h4>Développement</h4>
+              <a href="/services.html#logiciels-personnalises">Logiciels personnalisés</a>
+              <a href="/services.html#logiciels-operationnels">Logiciels opérationnels</a>
+              <a href="/services.html#sites-web">Création de sites web</a>
+              <a href="/services.html#gohighlevel">CRM GoHighLevel</a>
+            </div>
+            <div class="dropdown-col">
+              <h4>Consulting</h4>
+              <a href="/services.html#consulting-vente">Consulting en vente</a>
+              <a href="/services.html#branding">Marketing et branding</a>
+              <a href="/services.html#operations">Opérations et développement d'entreprise</a>
+            </div>
+          </div>
+        </div>
+        <a class="nav-link" href="/a-propos.html">À propos</a>
+        <a class="nav-link" href="/index.html#contact">Contact</a>
       </div>
 
       <div class="nav-actions">
@@ -48,37 +77,132 @@
 <section class="page-head">
   <div class="container">
     <span class="eyebrow">Formation</span>
+    <span class="offer-badge">Offre principale</span>
     <h1>Formez votre équipe. Industrialisez vos ventes.</h1>
-    <p>Des formations pratiques pour que chaque membre de votre équipe maîtrise le système d’acquisition, du premier appel jusqu’à la signature.</p>
+    <p>Une formation en ligne accompagnée de coaching hebdomadaire, destinée à permettre aux entrepreneurs de gérer leur marketing, leurs ventes et leurs opérations à l'interne.</p>
   </div>
 </section>
-<!-- ================= FORMATION ================= -->
-<section class="section approach" id="formation">
-  <div class="container approach-layout">
-    <div class="section-head reveal">
-      <span class="eyebrow">Formation</span>
-      <h2 style="margin-top:1.1rem">Formez votre équipe.<br>Industrialisez vos ventes.</h2>
-      <p>Des formations pratiques pour que chaque membre de votre équipe maîtrise le système d'acquisition, du premier appel jusqu'à la signature.</p>
-      <a class="btn btn-ghost" style="margin-top:1.8rem" href="/index.html#contact">S'inscrire à une formation
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-      </a>
-    </div>
 
-    <div class="feature-grid">
-      <article class="feature reveal">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div>
-        <h3>Fondamentaux de l'acquisition</h3>
-        <p>Les leviers concrets pour générer des soumissions qualifiées de façon constante.</p>
+<!-- ================= PRÉSENTATION / PROMESSE ================= -->
+<section class="section" id="presentation">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Offre principale</span>
+      <h2>Devenez autonome sur votre croissance.</h2>
+      <p>Une formation en ligne accompagnée de coaching hebdomadaire, destinée à permettre aux entrepreneurs de gérer leur marketing, leurs ventes et leurs opérations à l'interne.</p>
+    </div>
+    <div class="promise-grid">
+      <article class="promise-card">
+        <span class="promise-num">01</span>
+        <h3>48 heures</h3>
+        <p>Générer ses propres leads qualifiés en 48 heures.</p>
       </article>
-      <article class="feature reveal">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
-        <h3>Booking &amp; suivi</h3>
-        <p>Structurer votre calendrier, relancer au bon moment et ne plus perdre de mandats.</p>
+      <article class="promise-card">
+        <span class="promise-num">02</span>
+        <h3>30 jours</h3>
+        <p>Développer ses départements marketing, ventes et opérations en 30 jours.</p>
       </article>
-      <article class="feature reveal">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div>
-        <h3>Pilotage par agents IA</h3>
-        <p>Exploiter RénoScale pour automatiser la prise de rendez-vous et le suivi des soumissions.</p>
+      <article class="promise-card">
+        <span class="promise-num">03</span>
+        <h3>5 M$ et plus</h3>
+        <p>Construire une structure opérationnelle évolutive pouvant soutenir un chiffre d'affaires de 5 M$ et plus.</p>
+      </article>
+    </div>
+    <a class="btn btn-primary" style="margin-top:2.4rem" href="/index.html#contact">S'inscrire à la formation
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ================= PROGRAMME ================= -->
+<section class="section section--panel" id="programme">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Programme et modules</span>
+      <h2>Contenu de la formation</h2>
+      <p>Cinq modules pour construire, lancer et piloter votre système d'acquisition.</p>
+    </div>
+    <div class="module-table-wrap">
+      <table class="module-table">
+        <thead>
+          <tr><th scope="col">Module</th><th scope="col">Objectif</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row"><span>1</span>Structure du système</th><td>Comprendre et construire un système complet d'acquisition et de conversion.</td></tr>
+          <tr><th scope="row"><span>2</span>Démarrage rapide</th><td>Configurer Meta Business et lancer les premières publicités en 48 heures.</td></tr>
+          <tr><th scope="row"><span>3</span>Opérations</th><td>Maîtriser l'IA, les processus internes, l'analyse des données et GoHighLevel.</td></tr>
+          <tr><th scope="row"><span>4</span>Ventes</th><td>Apprendre à qualifier, convaincre et convertir les prospects froids.</td></tr>
+          <tr><th scope="row"><span>5</span>Marketing</th><td>Maîtriser Facebook Ads, la prospection commerciale et les stratégies marketing.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COACHING ================= -->
+<section class="section" id="coaching">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Coaching et accompagnement</span>
+      <h2>Quatre séances par semaine.</h2>
+      <p>L'offre comprend quatre séances de coaching par semaine autour de :</p>
+    </div>
+    <div class="coaching-grid">
+      <article class="coaching-card"><span>01</span><h3>Meta Business</h3></article>
+      <article class="coaching-card"><span>02</span><h3>Révision et optimisation des publicités</h3></article>
+      <article class="coaching-card"><span>03</span><h3>Techniques de vente</h3></article>
+      <article class="coaching-card"><span>04</span><h3>Systèmes opérationnels et analyse des données</h3></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES COMPLÉMENTAIRES ================= -->
+<section class="section section--panel" id="services-complementaires">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Services complémentaires</span>
+      <h2>Tout le reste, sous le même toit.</h2>
+      <p>En plus de la formation, Solution Lead propose trois grandes catégories de services.</p>
+    </div>
+    <div class="complementary-grid">
+      <article class="complementary-card">
+        <span class="card-letter">A</span>
+        <h3>Services marketing</h3>
+        <ul>
+          <li>Gestion des publicités Meta Ads.</li>
+          <li>Gestion des publicités Google Ads.</li>
+          <li>Référencement naturel (SEO).</li>
+          <li>Création de contenu vidéo.</li>
+        </ul>
+        <a class="text-link" href="/services.html#services">Voir les services marketing
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="complementary-card">
+        <span class="card-letter">B</span>
+        <h3>Développement web et logiciel</h3>
+        <ul>
+          <li>Développement de logiciels personnalisés.</li>
+          <li>Développement de logiciels opérationnels.</li>
+          <li>Création de sites web.</li>
+          <li>Développement de CRM GoHighLevel.</li>
+        </ul>
+        <a class="text-link" href="/services.html#services">Voir le développement
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="complementary-card">
+        <span class="card-letter">C</span>
+        <h3>Consulting</h3>
+        <ul>
+          <li>Consultation en vente.</li>
+          <li>Marketing et image de marque.</li>
+          <li>Opérations et développement d'entreprise.</li>
+          <li>Analyse de données.</li>
+        </ul>
+        <a class="text-link" href="/services.html#services">Voir le consulting
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
       </article>
     </div>
   </div>
@@ -93,14 +217,14 @@
         <a class="brand" href="/index.html"><img class="brand-logo" src="/logo-nouveau.png?v=2" alt="Solution Lead" width="120" height="70"></a>
         <p>Systèmes d'acquisition pour entrepreneurs de services et de construction. Croissance prévisible, garantie et mesurable.</p>
       </div>
-      <div class="footer-col"><h4>Liens du site</h4><ul><li><a href="/index.html">Accueil</a></li><li><a href="/a-propos.html">À propos</a></li><li><a href="/systemes.html">Systèmes</a></li><li><a href="/formation.html">Formation</a></li><li><a href="/approche.html">Approche</a></li><li><a href="/industries.html">Industries</a></li><li><a href="/resultats.html">Résultats</a></li></ul></div>
-      <div class="footer-col"><h4>Autres liens</h4><ul><li><a href="https://www.solutionlead.ca/politique-de-confidentialite" target="_blank" rel="noopener">Politique de confidentialité</a></li><li><a href="/index.html#contact">Consultation gratuite</a></li></ul></div>
+      <div class="footer-col"><h4>Liens du site</h4><ul><li><a href="/index.html">Accueil</a></li><li><a href="/formation.html">Formation</a></li><li><a href="/services.html">Services</a></li><li><a href="/a-propos.html">À propos</a></li><li><a href="/index.html#contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Autres liens</h4><ul><li><a href="/systemes.html">Systèmes</a></li><li><a href="/approche.html">Approche</a></li><li><a href="/industries.html">Industries</a></li><li><a href="/resultats.html">Résultats</a></li><li><a href="https://www.solutionlead.ca/politique-de-confidentialite" target="_blank" rel="noopener">Politique de confidentialité</a></li></ul></div>
       <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+15149185206">+1 (514) 918-5206</a></li><li><a href="mailto:info@solutionlead.ca">info@solutionlead.ca</a></li><li><a href="https://www.google.com/maps/place/Solution+Lead/data=!4m2!3m1!1s0x0:0xb35552dfd7ab5809" target="_blank" rel="noopener">202-3181 Mnt Saint-Hubert, Saint-Hubert, QC</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2025 Solution Lead. Tous droits réservés.</span><span>Conçu pour générer des ventes, pas des impressions.</span></div>
   </div>
 </footer>
 
-<script src="/site.js?v=9"></script>
+<script src="/site.js?v=11"></script>
 </body>
 </html>
